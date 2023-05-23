@@ -6,11 +6,10 @@ const FormularioTarea = () => {
   const [tarea, setTarea] = useState("");
   const [tareas, setTareas] = useState([]);
 
- const handleSubmit = (e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setTareas([...tareas, tarea])
- }
-
+    setTareas([...tareas, tarea]);
+  };
 
   return (
     <>
@@ -22,7 +21,9 @@ const FormularioTarea = () => {
             onChange={(e) => setTarea(e.target.value)}
             value={tarea}
           />
-          <Button variant="primary" type="submit">Agregar</Button>
+          <Button variant="primary" type="submit">
+            Agregar
+          </Button>
         </Form.Group>
       </Form>
       <ListaTareas></ListaTareas>
