@@ -9,6 +9,8 @@ const FormularioTarea = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setTareas([...tareas, tarea]);
+    //limpiar el input
+    setTarea('');
   };
 
   return (
@@ -26,7 +28,7 @@ const FormularioTarea = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ListaTareas></ListaTareas>
+      <ListaTareas tareas={tareas}></ListaTareas>
     </>
   );
 };
